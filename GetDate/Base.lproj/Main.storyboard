@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GetDate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,47 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5J-KD-Rnk">
+                                <rect key="frame" x="167" y="285" width="266" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="zwA-PZ-06Q"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Law-UF-Ncz">
+                                <rect key="frame" x="167" y="381" width="266" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="5eg-CM-AE5"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Law-UF-Ncz" firstAttribute="leading" secondItem="d5J-KD-Rnk" secondAttribute="leading" id="Aw7-8Z-QTb"/>
+                            <constraint firstAttribute="centerX" secondItem="d5J-KD-Rnk" secondAttribute="centerX" id="IpL-LL-BNu"/>
+                            <constraint firstItem="Law-UF-Ncz" firstAttribute="top" secondItem="d5J-KD-Rnk" secondAttribute="bottom" constant="66" id="RcS-7z-W1p"/>
+                            <constraint firstAttribute="centerY" secondItem="d5J-KD-Rnk" secondAttribute="centerY" id="cuL-SA-5XO"/>
+                            <constraint firstAttribute="centerX" secondItem="d5J-KD-Rnk" secondAttribute="centerX" id="ryr-TS-edq"/>
+                            <constraint firstAttribute="centerY" secondItem="d5J-KD-Rnk" secondAttribute="centerY" id="u6l-yG-PVv"/>
+                            <constraint firstItem="Law-UF-Ncz" firstAttribute="trailing" secondItem="d5J-KD-Rnk" secondAttribute="trailing" id="wi8-iR-Fjs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IpL-LL-BNu"/>
+                                <exclude reference="u6l-yG-PVv"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bttnReturn" destination="Law-UF-Ncz" id="Ye4-Wd-0nW"/>
+                        <outlet property="bttnTodayIs" destination="d5J-KD-Rnk" id="mR4-j5-WiH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
